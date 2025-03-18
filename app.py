@@ -123,6 +123,9 @@ def reload_data():
         'average_engineSize': df['engineSize'].mean()
     }
 
+    summary = {key: (int(value) if isinstance(value, np.int64) else float(value) if isinstance(value, np.float64) else value)
+               for key, value in summary.items()}
+
     return jsonify(summary)
 
 @app.route('/predict', methods=['POST'])
