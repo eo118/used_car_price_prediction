@@ -10,7 +10,7 @@ This Streamlit app visualizes Toyota used car data and allows users to interact 
 
 ## How to Use
 
-1. Open the Streamlit app on [Streamlit Cloud](https://YOUR-STREAMLIT-URL-HERE)
+1. Open the Streamlit app on [Streamlit Cloud](https://usedcarpriceprediction-ujac6gdo8xqbhpezenx5yd.streamlit.app/)
 2. Select a column from the dropdown
 3. View the visualization
 
