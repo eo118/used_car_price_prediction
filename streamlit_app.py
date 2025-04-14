@@ -2,7 +2,7 @@ import streamlit as st
 import pandas as pd
 import plotly.express as px
 import numpy as np
-import joblib  # use this if you want to load a saved model
+import joblib  
 from sklearn.linear_model import LinearRegression
 from sklearn.preprocessing import OneHotEncoder
 
@@ -12,7 +12,7 @@ st.header("🚗 Used Car Price Analysis & Prediction")
 df = pd.read_csv("toyota.csv")
 
 # ===== Preprocessing & Model Training =====
-# For demo: you could also load a pre-trained model using joblib
+
 df_clean = df.dropna()
 categorical_features = ['model', 'transmission', 'fuelType']
 encoder = OneHotEncoder(handle_unknown='ignore', sparse_output=False)
@@ -81,7 +81,7 @@ with st.form("prediction_form"):
         missing_cols = set(X.columns) - set(final_input.columns)
         for col in missing_cols:
             final_input[col] = 0
-        final_input = final_input[X.columns]  # Reorder
+        final_input = final_input[X.columns] 
 
         predicted_price = model.predict(final_input)[0]
         st.success(f"Estimated Car Price: £{predicted_price:,.2f}")
