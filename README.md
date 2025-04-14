@@ -21,13 +21,3 @@ git clone https://github.com/eo118/used_car_price_prediction.git
 cd used_car_price_prediction
 pip install -r requirements.txt
 streamlit run streamlit_app.py
-
-## Project Structure
-streamlit-app/
-├── streamlit_app.py
-├── requirements.txt
-├── toyota.csv
-└── .streamlit/
-    └── config.toml
-
-
